@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 // Client instance
 var client = new Discord.Client();
 
-
 // Welcome message
    client.on("guildMemberAdd", user =>{
     let joinEmbed = new Discord.RichEmbed()
@@ -11,11 +10,7 @@ var client = new Discord.Client();
         .setAuthor(user.user.username, user.user.displayAvatarURL)
         .setDescription("Salut "+ user + "! Bienvenue dans la communauté de **France Multigaming** 🎉🤗 ! Afin de voir __***les salons de jeux***__ te correspondant, merci de te reporter dans <#584335406917746689> . Je t'invite aussi à prendre connaissance des <#584335354031636481> et <#584326401935671299> ainsi que les règles pour les jeux auxquels tu pourrais participer :innocent:. Bon jeu!")
         .setFooter("France Multigaming");
-    user.guild.channels.get("613356488509095946").send(joinEmbed);
-
-var role = member.guild.roles.find('name', 'User');
-member.addRole(role)
-
+    user.guild.channels.get("61335648850909594").send(joinEmbed);
 });
 
 // Config
